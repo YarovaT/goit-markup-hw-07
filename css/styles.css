@@ -100,6 +100,10 @@ ul {
 /* Кнопки */
 
 .button {
+  padding: 10px 32px;
+  /* min-width: 200px;
+  min-height: 50px; */
+
   font-size: var(--secondary-font-size);
   font-weight: var(--secondary-font-weight);
   line-height: var(--button-line-height);
@@ -110,6 +114,7 @@ ul {
 
   border: 1px solid transparent;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
   text-decoration: none;
@@ -119,20 +124,12 @@ ul {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button--big-size {
-  min-width: 200px;
-  min-height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
 .email-form__button {
+  padding: 10px 28px;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  min-width: 200px;
-  min-height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .select-buttons__btn {
@@ -144,6 +141,7 @@ ul {
   color: var(--primary-text-color);
 
   background-color: var(--secondary-background-color);
+  box-shadow: none;
 }
 
 .select-buttons__btn:hover,
@@ -158,7 +156,7 @@ ul {
 .button:hover,
 .button:focus {
   background-color: var(--active-button-background-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .select-buttons {
@@ -174,6 +172,37 @@ ul {
 
 .select-buttons__item:last-child {
   margin-right: 0;
+}
+
+.modal__buttton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: var(--primary-background-color);
+  color: var(--accent-text-color);
+
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  fill: currentColor;
+}
+
+.modal__buttton:hover,
+.modal__buttton:focus {
+  color: var(--accent-color);
 }
 
 /* Шапка сайта */
@@ -772,13 +801,13 @@ ul {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.backdrop--is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop--is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
@@ -801,37 +830,6 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-buttton {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-
-  background-color: var(--primary-background-color);
-  color: var(--accent-text-color);
-
-  cursor: pointer;
-}
-
-.close-icon {
-  fill: currentColor;
-}
-
-.close-buttton:hover,
-.close-buttton:focus {
-  color: var(--accent-color);
-}
-
 /* Форма Заявки */
 
 textarea {
@@ -847,7 +845,7 @@ textarea {
   outline: none;
 }
 
-.modal-title {
+.modal__title {
   margin-top: 32px;
   margin-bottom: 12px;
 
@@ -856,7 +854,7 @@ textarea {
   text-align: center;
 }
 
-.modal-form {
+.modal__form {
   padding: 0;
   margin: 0px auto;
   margin-top: 30px;
@@ -865,7 +863,7 @@ textarea {
   width: 448px;
 }
 
-.form-field {
+.modal__form-field {
   position: relative;
 
   display: block;
@@ -880,11 +878,11 @@ textarea {
   outline: none;
 }
 
-.form-field > textarea::placeholder {
+.modal__form-field > textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-label {
+.modal__form-label {
   position: absolute;
   top: 0;
   left: 0;
@@ -892,7 +890,7 @@ textarea {
   transform: translateY(-10px);
 }
 
-.form-input {
+.modal__form-input {
   margin-bottom: 28px;
 
   color: var(--primary-text-color);
@@ -900,13 +898,13 @@ textarea {
   outline: none;
 }
 
-.form-input input {
+.modal__text-input {
   margin: 0;
   padding: 11px 12px;
-  padding-left: 42px;
+  /* padding-left: 42px; */
 
   width: 100%;
-  height: 40px;
+  /* height: 40px; */
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -916,7 +914,11 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-modal {
+.modal__text-input--indent {
+  padding-left: 42px;
+}
+
+.modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -931,35 +933,28 @@ textarea {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus-within > input {
+.modal__form-input:focus-within > .modal__icon {
   color: var(--accent-color);
+}
 
+.modal__text-input:focus-within {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
 
-.form-input:focus-within > .icon-modal {
-  color: var(--accent-color);
-}
-
-.comment:focus-within {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-
-.checkbox-label {
+.modal__checkbox-text {
   font-size: var(--primary-font-size);
   line-height: var(--secondary-line-height);
   letter-spacing: 0.03em;
 }
 
-.label-link {
+.modal__checkbox-link {
   color: var(--accent-color);
 
   text-decoration: underline;
 }
 
-.check {
+.modal__form-field--string {
   margin-top: 20px;
   margin-bottom: 30px;
 
@@ -968,39 +963,7 @@ textarea {
   justify-content: center;
 }
 
-.btn-submit {
-  padding: 0;
-  min-width: 200px;
-  min-height: 50px;
-
-  font-size: var(--secondary-font-size);
-  font-weight: var(--secondary-font-weight);
-  line-height: var(--button-line-height);
-  letter-spacing: 0.06em;
-  color: var(--primary-background-color);
-
-  background-color: var(--accent-color);
-
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  text-decoration: none;
-  outline: none;
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-submit:hover,
-.btn-submit:focus {
-  background-color: var(--active-button-background-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.checkbox {
+.modal__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1011,7 +974,7 @@ textarea {
   overflow: hidden;
 }
 
-.checkbox:checked + .icon-input {
+.modal__checkbox:checked + .modal__icon-check {
   border-color: transparent;
   background-color: var(--accent-color);
   background-image: url("../images/icon-check.svg");
@@ -1019,7 +982,7 @@ textarea {
   background-origin: border-box;
 }
 
-.icon-input {
+.modal__icon-check {
   margin-right: 8px;
 
   display: inline-block;
