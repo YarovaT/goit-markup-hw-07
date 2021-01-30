@@ -1,0 +1,119 @@
+// Форма Заявки
+
+.modal-form {
+  padding: 0;
+  margin: 0px auto;
+  margin-top: 30px;
+  text-align: center;
+
+  width: 448px;
+
+  &__field {
+    position: relative;
+
+    display: block;
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+
+    outline: none;
+
+    &--string {
+      @extend %container--flex;
+
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translateY(-10px);
+  }
+
+  &__input {
+    margin-bottom: 28px;
+
+    color: $primary-text-color;
+
+    outline: none;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 11px 12px;
+
+    width: 100%;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    outline: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--indent {
+      padding-left: 42px;
+    }
+
+    &:focus-within {
+      border: 1px solid $accent-color;
+      border-radius: 4px;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+
+  padding: 12px 16px;
+
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  outline: none;
+
+  .modal-form__field > &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &__text {
+    font-size: $primary-font-size;
+    line-height: $secondary-line-height;
+    letter-spacing: 0.03em;
+  }
+
+  &__link {
+    color: $accent-color;
+
+    text-decoration: underline;
+  }
+
+  &:checked + .modal__icon-check {
+    border-color: transparent;
+    background-color: $accent-color;
+    background-image: url("../images/icon-check.svg");
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
