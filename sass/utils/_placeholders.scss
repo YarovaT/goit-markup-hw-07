@@ -4,14 +4,6 @@
   list-style: none;
 }
 
-%link {
-  text-decoration: none;
-}
-
-%title {
-  margin-top: 0;
-}
-
 %icon {
   fill: currentColor;
 }
@@ -23,11 +15,13 @@
   font-weight: $secondary-font-weight;
   line-height: $button-line-height;
   letter-spacing: 0.06em;
+
   color: $primary-background-color;
 
   background-color: $accent-color;
 
   border: 1px solid transparent;
+
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
@@ -53,7 +47,7 @@
   margin: -1px;
 }
 
-%container--flex {
+%centered {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -15,10 +15,6 @@ img {
   height: auto;
 }
 
-p {
-  margin: 0;
-}
-
 // Основной контейнер
 
 .container {
@@ -43,6 +39,6 @@ p {
   }
 
   &--theme__light {
-    background-color: var(--secondary-background-color);
+    background-color: $secondary-background-color;
   }
 }

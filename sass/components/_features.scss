@@ -14,7 +14,7 @@
   }
 
   &__icon {
-    @extend %container--flex;
+    @extend %centered;
 
     margin-bottom: 30px;
 
@@ -27,8 +27,6 @@
   }
 
   &__title {
-    @extend %title;
-
     margin-bottom: 10px;
 
     font-size: $primary-font-size;

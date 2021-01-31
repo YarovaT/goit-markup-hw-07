@@ -1,8 +1,6 @@
 // Логотип сайта
 
 .logo {
-  @extend %link;
-
   font-family: $secondary-font-family;
   font-size: 26px;
   font-weight: $secondary-font-weight;

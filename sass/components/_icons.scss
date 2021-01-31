@@ -3,6 +3,8 @@
 }
 
 .modal__icon-check {
+  @include animation(transform);
+
   margin-right: 8px;
   width: 16px;
   height: 15px;
@@ -11,8 +13,6 @@
 
   border: 2px solid #2a2a2a;
   border-radius: 2px;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__close-icon {
@@ -27,6 +27,7 @@
 
 .modal__icon {
   @extend %icon;
+  @include animation(border);
 
   position: absolute;
   top: 50%;
@@ -37,10 +38,8 @@
   height: 18px;
 
   transform: translateY(-50%);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  .modal-form__input:focus-within > & {
-  color: $accent-color;}
 
-  
+  .modal-form__input:focus-within > & {
+    color: $accent-color;
+  }
 }

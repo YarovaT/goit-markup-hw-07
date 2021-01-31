@@ -20,7 +20,7 @@
 }
 
 .hero-box {
-  @extend %container--flex;
+  @extend %centered;
 
   height: 100%;
 }

@@ -12,7 +12,9 @@
   }
 
   &__name {
-    @extend %container--flex;
+    @extend %centered;
+    @include animation(color);
+    @include animation(background-color);
 
     width: 44px;
     height: 44px;
@@ -22,9 +24,6 @@
 
     border-radius: 50%;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     &:hover,
     &:focus {
       color: $primary-background-color;
@@ -33,7 +32,7 @@
   }
 
   &__icon {
-    fill: currentColor;
+    @extend %icon;
   }
 
   &__item {
