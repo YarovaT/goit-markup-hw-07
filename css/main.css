@@ -318,7 +318,7 @@ summary {
   font-weight: 700;
   src: url("./fonts/raleway-v19-latin_cyrillic-700.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("./fonts/raleway-v19-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("./fonts/raleway-v19-latin_cyrillic-700.woff2") format("woff2"), url("./fonts/raleway-v19-latin_cyrillic-700.woff") format("woff"), url("/fonts/raleway-v19-latin_cyrillic-700.ttf") format("truetype"), url("./fonts/raleway-v19-latin_cyrillic-700.svg#Raleway") format("svg");
+  src: local(""), url("./fonts/raleway-v19-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("./fonts/raleway-v19-latin_cyrillic-700.woff2") format("woff2"), url("./fonts/raleway-v19-latin_cyrillic-700.woff") format("woff"), url("./fonts/raleway-v19-latin_cyrillic-700.ttf") format("truetype"), url("./fonts/raleway-v19-latin_cyrillic-700.svg#Raleway") format("svg");
   /* Legacy iOS */
 }
 
