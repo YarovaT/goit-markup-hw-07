@@ -307,7 +307,7 @@ summary {
   font-weight: 400;
   src: url("../fonts/raleway-v19-latin_cyrillic-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/raleway-v19-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-v19-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/raleway-v19-latin_cyrillic-regular.woff") format("woff"), url("./fonts/raleway-v19-latin_cyrillic-regular.ttf") format("truetype"), url("./fonts/raleway-v19-latin_cyrillic-regular.svg#Raleway") format("svg");
+  src: local(""), url("../fonts/raleway-v19-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-v19-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/raleway-v19-latin_cyrillic-regular.woff") format("woff"), url("../fonts/raleway-v19-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/raleway-v19-latin_cyrillic-regular.svg#Raleway") format("svg");
   /* Legacy iOS */
 }
 
@@ -956,16 +956,20 @@ img {
   color: #ffffff;
 }
 
-.address__text, .address__link {
+.address__link {
   padding-bottom: 9px;
 }
 
-.address__text:nth-last-child(n), .address__link:nth-last-child(n) {
+.address__link:nth-last-child(n) {
   padding-bottom: 0;
 }
 
-.address__text, .address__link {
+.address__link {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.address__text {
+  padding-bottom: 9px;
 }
 
 /* Форма подписки */
@@ -1066,13 +1070,13 @@ img {
   opacity: 1;
 }
 
-.backdrop--is-hidden {
+.backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop--is-hidden .modal {
+.backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0.9);
           transform: translate(-50%, -50%) scale(0.9);
 }
@@ -1094,14 +1098,6 @@ img {
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-}
-
-.modal__title {
-  margin-top: 32px;
-  margin-bottom: 12px;
-  font-size: 16px;
-  line-height: 1.15;
-  text-align: center;
 }
 
 .modal-form {

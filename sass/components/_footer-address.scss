@@ -6,7 +6,6 @@
   line-height: $secondary-line-height;
   color: $primary-background-color;
 
-  &__text,
   &__link {
     padding-bottom: 9px;
 
@@ -17,5 +16,9 @@
     & {
       color: rgba(255, 255, 255, 0.6);
     }
+  }
+
+  &__text {
+    padding-bottom: 9px;
   }
 }
