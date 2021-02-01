@@ -1,6 +1,13 @@
 .button {
   @extend %button;
+  min-width: 200px;
+  min-height: 50px;
 }
+
+// &__submit {
+//   min-width: 200px;
+//   min-height: 50px;
+// }
 
 .email-form__button {
   @extend %button;

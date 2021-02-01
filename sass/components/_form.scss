@@ -40,6 +40,15 @@
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
+
+  &__title {
+    margin-top: 32px;
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+  }
 }
 
 // Форма Заявки
