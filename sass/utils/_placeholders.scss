@@ -9,6 +9,9 @@
 }
 
 %button {
+  min-width: 200px;
+  min-height: 50px;
+
   font-size: $secondary-font-size;
   font-weight: $secondary-font-weight;
   line-height: $button-line-height;
